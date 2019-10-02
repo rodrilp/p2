@@ -5,6 +5,11 @@ export default class Game extends Component {
         return (
             <div>
                 {this.props.question.question}
+                <input  type ='text'
+                        value ={this.props.question.userAnswer || ''}
+                        onChange ={(e)=> this.props.QuestionAnswer(e.target.value)}
+                />
+
             </div>
         )
     }

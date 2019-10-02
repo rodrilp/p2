@@ -7,7 +7,11 @@ function App(props) {
   console.log(props)
   return (
     <div className='App'>
-      <Game question={props.questions[props.currentQuestion]}/>
+      <Game question={props.questions[props.currentQuestion]}
+            onQuestionAnswer={answer => {
+              this.props.dispatch(questionAnswer(this.props.currentQuestion, answer));
+            }}
+      />
     </div>
     
     
