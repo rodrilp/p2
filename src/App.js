@@ -19,7 +19,7 @@ export class App extends Component {
             onQuestionAnswer={(answer) => {
               this.props.dispatch(questionAnswer(this.props.currentQuestion, answer));
             }}
-      />
+        />
       </div>
     )
   }
