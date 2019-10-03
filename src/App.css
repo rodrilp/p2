@@ -30,3 +30,7 @@ h1{
   text-align: left;
   color: aliceblue;
 }
+.imagecontainer{
+  width: 50;
+  height: 50;
+}
