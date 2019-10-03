@@ -27,7 +27,7 @@ function questions(state = [], action = {}) {
         case QUESTION_ANSWER:
             return state.map((question, i) => {
                 return {...question,
-                    userAnswer:action.payload.i === i ? action.payload.answer : question.userAnswer
+                    userAnswer:action.payload.index === i ? action.payload.answer : question.userAnswer
                 };
             });
         default:
