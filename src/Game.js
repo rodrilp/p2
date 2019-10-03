@@ -4,8 +4,7 @@ export default class Game extends Component {
     render() {
         return (
             <div>
-                <Question question = {this.props.question}
-                            imagen = {this.props.question.attachment.url}/>
+                <Question question = {this.props.question}/>
             </div>
         )
     }
