@@ -16,9 +16,10 @@ export class App extends Component {
           <h1>QUIZ GAME</h1>
         </div>
         <Game question = {this.props.questions[this.props.currentQuestion]}
-            onQuestionAnswer={(answer) => {
-              this.props.dispatch(questionAnswer(this.props.currentQuestion, answer));
-            }}
+              currentQuestion = {this.props.currentQuestion}
+              onQuestionAnswer={(answer) => {
+                this.props.dispatch(questionAnswer(this.props.currentQuestion, answer));
+              }}
         />
       </div>
     )

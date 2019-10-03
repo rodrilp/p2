@@ -6,11 +6,8 @@ export default class Question extends Component {
         return (
             <div>
                 <img src={this.props.question.attachment.url} width="600px" weigth="600px"/>
+                Question {this.props.currentQuestion}
                 {this.props.question.question}
-                <input  type ='text'
-                        value={this.props.question.userAnswer || ""}
-                        onChange = {(e)=> {this.props.onQuestionAnswer(e.target.value)}}
-                />
             </div>
         )
     }
