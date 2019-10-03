@@ -5,9 +5,9 @@ export default class Question extends Component {
     render() {
         return (
             <div>
-                <img src={this.props.question.attachment.url} width="600px" weigth="600px"/>
-                Question {this.props.currentQuestion}
-                {this.props.question.question}
+                <img className = "foto" src={this.props.question.attachment.url} />
+                <p className = "texto">Question {this.props.currentQuestion}
+                <p>{this.props.question.question}</p></p>
             </div>
         )
     }

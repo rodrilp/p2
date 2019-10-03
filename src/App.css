@@ -30,7 +30,45 @@ h1{
   text-align: left;
   color: aliceblue;
 }
-.imagecontainer{
-  width: 50;
-  height: 50;
+.foto{
+  position: relative;
+  top: 0px; /* ajustar los valores para mover la imagen */
+  left: 15px;
+  width: 500px;
+  height: 300px;
+  display: block;
+}
+.texto{
+  position: relative;
+  top: -250px; /* ajustar los valores para mover la imagen */
+  left:685px;
+  width: 500px;
+  height: 300;
+  font-size: 40px;
+  display: block;
+}
+.caja{
+  position: relative;
+  top: -250px; /* ajustar los valores para mover la imagen */
+  left:840px;
+  width: 200px;
+  height: 45px;
+  display: block;
+}
+.botonera{
+  position: relative;
+  top: -225px; /* ajustar los valores para mover la imagen */
+  left:280px;
+  width: 600px;
+  height: 45px;
+  display: block;
+}
+.credits{
+  position: relative;
+  top: -500px; /* ajustar los valores para mover la imagen */
+  left:950px;
+  width: 500px;
+  height: 300;
+  font-size: 15px;
+  display: block;
 }
