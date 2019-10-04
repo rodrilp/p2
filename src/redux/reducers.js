@@ -20,7 +20,7 @@ function currentQuestion(state = 0, action = {}) {
         case CHANGE_QUESTION:
 			if (action.isNext){
 				return state+1;
-			}
+			} 
 			return state-1;
         default:
             return state;

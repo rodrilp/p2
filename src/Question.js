@@ -6,7 +6,7 @@ export default class Question extends Component {
         return (
             <div>
                 <img className = "foto" src={this.props.question.attachment.url} />
-                <p className = "texto">Question {this.props.currentQuestion}
+                <p className = "texto">Question {this.props.currentQuestion + 1}
                 <p>{this.props.question.question}</p></p>
             </div>
         )

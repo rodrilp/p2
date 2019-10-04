@@ -11,7 +11,7 @@ export default class Game extends Component {
                             currentQuestion = {this.props.currentQuestion}/>
                 <input  className="caja"
                         type ='text'
-                        value={this.props.question.userAnswer || ""}
+                        value={this.props.question.userAnswer || ''}
                         onChange = {(e)=> {this.props.onQuestionAnswer(e.target.value)}}
                 />
                 

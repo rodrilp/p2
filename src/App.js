@@ -3,7 +3,7 @@ import './App.css';
 import { connect } from 'react-redux';
 import Game from './Game';
 import Botonera from './Botonera'
-import {questionAnswer} from './redux/actions'
+import {questionAnswer, changeQuestion} from './redux/actions'
 
 
 
@@ -22,7 +22,8 @@ export class App extends Component {
                 this.props.dispatch(questionAnswer(this.props.currentQuestion, answer));
               }}
         />
-        <Botonera/>
+        <Botonera question = {this.props.questions[this.props.currentQuestion]}
+                  onChangequestion = {(next) =>this.props.dispatch(changeQuestion(next))}/>
       </div>
     )
   }
