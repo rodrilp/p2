@@ -65,7 +65,7 @@ h1{
 }
 .credits{
   position: relative;
-  top: -500px; /* ajustar los valores para mover la imagen */
+  top: -480px; /* ajustar los valores para mover la imagen */
   left:950px;
   width: 500px;
   height: 300;

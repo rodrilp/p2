@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 import Game from './Game';
+import Botonera from './Botonera'
 import {questionAnswer} from './redux/actions'
 
 
@@ -21,6 +22,7 @@ export class App extends Component {
                 this.props.dispatch(questionAnswer(this.props.currentQuestion, answer));
               }}
         />
+        <Botonera/>
       </div>
     )
   }
