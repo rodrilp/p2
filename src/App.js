@@ -23,6 +23,9 @@ export class App extends Component {
               }}
         />
         <Botonera question = {this.props.questions[this.props.currentQuestion]}
+                  currentQuestion = {this.props.currentQuestion}
+                  length = {this.props.questions.length}
+                  finished = {this.props.finished}
                   onChangequestion = {(next) =>this.props.dispatch(changeQuestion(next))}/>
       </div>
     )
