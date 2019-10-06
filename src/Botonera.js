@@ -9,7 +9,8 @@ export default class Botonera extends Component {
             <div>
                 <ButtonGroup className = "botonera" aria-label="Basic example">
                     <Button variant="success"
-                            disabled = {!this.props.finished}>Submit</Button>
+                            onClick = {()=> this.props.onSubmit()}
+                            disabled = {this.props.currentQuestion !== (this.props.length -1)}>Submit</Button>
                     <Button variant="success"
                             onClick = {()=> this.props.onChangequestion(false)}
                             disabled = {this.props.currentQuestion === 0}>Previous
