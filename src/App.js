@@ -10,7 +10,7 @@ import {questionAnswer, changeQuestion, submit, initQuestion} from './redux/acti
 
 export class App extends Component {
 
-  componentWillMount(){
+  componentDidMount(){
     fetch('https://quiz.dit.upm.es/api/quizzes/random10wa?token=32403b83b30b3e467e6c')
     .then((response) =>{
       return response.json();
