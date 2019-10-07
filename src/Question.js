@@ -8,16 +8,21 @@ export default class Question extends Component {
             return (
                 <div>
                     <img className = "foto" src={this.props.question.attachment.url} alt=''/>
-                    <p className = "texto">Question {this.props.currentQuestion + 1}
-                    <p>{this.props.question.question}</p></p>
+                    <div>
+                        <p className = "texto">Question {this.props.currentQuestion + 1}</p>
+                        <p className = "texto">{this.props.question.question}</p>
+                    </div>
                 </div>
+                
             )
         }else{
             return (
             <div>
                 <img className = "foto" src={imagen} alt=''/>
-                <p className = "texto">Question {this.props.currentQuestion + 1}
-                <p>{this.props.question.question}</p></p>
+                <div>
+                    <p className = "texto">Question {this.props.currentQuestion + 1}</p>
+                    <p className = "texto">{this.props.question.question}</p>
+                </div>
             </div>
             )
         }

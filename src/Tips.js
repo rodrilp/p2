@@ -7,8 +7,8 @@ export default class Tips extends Component {
         if (this.props.question.tips.length === 0) {
             list = "No tips for this quiz";
         }else{
-            list = this.props.question.tips.map((tip) => 
-                <li>{tip}</li>            
+            list = this.props.question.tips.map((tip, index) => 
+                <li key={index}>{tip}</li>            
             );
         }
         return (
