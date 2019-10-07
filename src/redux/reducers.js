@@ -5,7 +5,7 @@ function score(state = 0, action = {}) {
     switch(action.type) {
         case SUBMIT:
             let score = 0;
-            action.questions.map((question) => {
+            action.questions.forEach(question => {
                 if(question.userAnswer === question.answer ){
                     score ++;
                 }
