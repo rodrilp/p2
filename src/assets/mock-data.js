@@ -19,7 +19,7 @@ export const questions =[
          "url":"https://quiz.dit.upm.es/uploads/capitals/Nicosia.jpg"
       },
       "favourite":false,
-      "tips":[
+      "tips":[ "Primer tip", "Segundo tip", "Tercer tip"
 
       ]
    },

@@ -15,7 +15,7 @@ export default class Game extends Component {
                         value={this.props.question.userAnswer || ''}
                         onChange = {(e)=> {this.props.onQuestionAnswer(e.target.value)}}
                 />
-                <a className = "credits">Created by {this.props.question.author.username}</a>
+                <a className = "credits" href = {this.props.question.author.photo.url}>Created by {this.props.question.author.username}</a>
                 <Tips question = {this.props.question}/>
             </div>
         )
