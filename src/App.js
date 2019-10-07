@@ -4,11 +4,19 @@ import { connect } from 'react-redux';
 import Game from './Game';
 import Botonera from './Botonera'
 import Mark from './Mark'
-import {questionAnswer, changeQuestion, submit} from './redux/actions'
+import {questionAnswer, changeQuestion, submit, initQuestion} from './redux/actions'
 
 
 
 export class App extends Component {
+
+  componentWillMount(){
+    fetch('https://quiz.dit.upm.es/api/quizzes/random10wa?token=32403b83b30b3e467e6c')
+    .then((response) =>{
+      return response.json();
+    })
+    .then((data) => this.props.dispatch(initQuestion(data)))
+  }
 
   render() {
     //console.log(this.props);
