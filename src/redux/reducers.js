@@ -5,9 +5,11 @@ function score(state = 0, action = {}) {
     switch(action.type) {
         case SUBMIT:
             let score = 0;
-            action.questions.forEach(question => {
-                if(question.userAnswer === question.answer ){
-                    score ++;
+            action.questions.forEach((question) => {
+                if(question.answer !== undefined && question.userAnswer !== undefined){
+                    if(question.userAnswer.toLowerCase().trim() === question.answer.toLowerCase().trim()){
+                        score ++;
+                    }
                 }
             })
             return score;
