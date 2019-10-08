@@ -15,6 +15,7 @@ export default class Game extends Component {
                 <input  className="caja"
                         type ='text'
                         value={this.props.question.userAnswer || ''}
+                        placeholder='Introduzca su respuesta'
                         title ="Respuesta"
                         onChange = {(e)=> {this.props.onQuestionAnswer(e.target.value)}}
                 />
