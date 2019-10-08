@@ -44,7 +44,8 @@ export class App extends Component {
                     onSubmit = {() => this.props.dispatch(submit(this.props.questions))}
                     onReset = {() => {
                       this.loadQuizzes()
-                      this.props.dispatch(reset())}}/>
+                      this.props.dispatch(reset())}}
+          />
         </div>
       )
     }else {

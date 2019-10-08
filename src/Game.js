@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import Question from "./Question"
 import Tips from "./Tips"
+import Image from 'react-bootstrap/Image'
 import './App.css';
 
 
 export default class Game extends Component {
     render() {
+        let imagen = this.props.question.author.photo.url;
         return (
             <div>
                 <Question question = {this.props.question}
@@ -15,7 +17,9 @@ export default class Game extends Component {
                         value={this.props.question.userAnswer || ''}
                         onChange = {(e)=> {this.props.onQuestionAnswer(e.target.value)}}
                 />
-                <a className = "credits" href = {this.props.question.author.photo.url}>Created by {this.props.question.author.username}</a>
+                <p className = "credits">Created by {this.props.question.author.username}
+                    <Image className="fotoCreador" src={imagen} roundedCircle/>
+                </p>
                 <Tips question = {this.props.question}/>
             </div>
         )
