@@ -15,10 +15,11 @@ export default class Game extends Component {
                 <input  className="caja"
                         type ='text'
                         value={this.props.question.userAnswer || ''}
+                        title ="Respuesta"
                         onChange = {(e)=> {this.props.onQuestionAnswer(e.target.value)}}
                 />
                 <p className = "credits">Created by {this.props.question.author.username}
-                    <Image className="fotoCreador" src={imagen} roundedCircle/>
+                    <Image className="fotoCreador" src={imagen} roundedCircle alt ="Avatar del creador de la pregunta"/>
                 </p>
                 <Tips question = {this.props.question}/>
             </div>
