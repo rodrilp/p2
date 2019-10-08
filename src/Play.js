@@ -52,7 +52,10 @@ export class Play extends Component {
           <div className = 'Navbar'>
             <h1>QUIZ GAME</h1>
           </div>
-        <Mark score = {this.props.score}/>
+        <Mark score = {this.props.score}
+              onReset = {() => {
+                this.loadQuizzes()
+                this.props.dispatch(reset())}}/>
         </div>
         
       )
