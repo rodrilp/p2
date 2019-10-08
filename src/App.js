@@ -4,18 +4,21 @@ import { connect } from 'react-redux';
 import Game from './Game';
 import Botonera from './Botonera'
 import Mark from './Mark'
-import {questionAnswer, changeQuestion, submit, initQuestion} from './redux/actions'
+import {questionAnswer, changeQuestion, submit, initQuestion, reset} from './redux/actions'
 
 
 
 export class App extends Component {
 
-  componentDidMount(){
+  loadQuizzes(){
     fetch('https://quiz.dit.upm.es/api/quizzes/random10wa?token=32403b83b30b3e467e6c')
     .then((response) =>{
       return response.json();
     })
     .then((data) => this.props.dispatch(initQuestion(data)))
+  }
+  componentDidMount(){
+    this.loadQuizzes();
   }
 
   render() {
@@ -38,7 +41,10 @@ export class App extends Component {
                     length = {this.props.questions.length}
                     finished = {this.props.finished}
                     onChangequestion = {(next) =>this.props.dispatch(changeQuestion(next))}
-                    onSubmit = {() => this.props.dispatch(submit(this.props.questions))}/>
+                    onSubmit = {() => this.props.dispatch(submit(this.props.questions))}
+                    onReset = {() => {
+                      this.loadQuizzes()
+                      this.props.dispatch(reset())}}/>
         </div>
       )
     }else {

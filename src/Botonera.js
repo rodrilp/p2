@@ -20,6 +20,9 @@ export default class Botonera extends Component {
                             onClick = {()=> this.props.onChangequestion(true)}
                             disabled = {this.props.currentQuestion === (this.props.length -1)}>Next
                     </Button>
+                    <Button variant="success"
+                            onClick = {()=> this.props.onReset()}>Reset
+                    </Button>
                 </ButtonGroup>
             </div>
         )
