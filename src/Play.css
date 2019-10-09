@@ -1,8 +1,12 @@
+
 .padre{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .spinner{
-    margin-top: 130px;
+    margin: 0 auto;
+}
+.rueda{
+    margin-left: 70px;
 }

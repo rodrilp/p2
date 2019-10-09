@@ -25,7 +25,7 @@ export class Play extends Component {
     render() {
         //console.log(this.props);
     console.log(this.props.questions)
-    if(this.props.questions.length>0){
+    if(this.props.questions.length<0){
       if(!this.props.finished){
         return (
           <div className = 'App'>
@@ -70,7 +70,7 @@ export class Play extends Component {
         <div className='padre'>
           <div className= 'spinner'>
             <p className = 'text'>Cargando las preguntas...</p>  
-            <p><Spinner animation="border" variant="primary"/></p>
+            <p className='rueda'><Spinner animation="border" variant="primary"/></p>
           </div>
         </div>
         
