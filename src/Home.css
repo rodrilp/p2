@@ -1,0 +1,10 @@
+.index{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item{
+    padding-bottom: 10px;
+}
