@@ -8,6 +8,7 @@ import {
 from "react-router-dom"
 import Home from './Home';
 import Play from './Play';
+import Practice from './Practice';
 
 
 
@@ -18,6 +19,7 @@ export class App extends Component {
         <Router>
           <Route path="/" exact component={Home} />
           <Route path="/play/" component ={Play}/>
+          <Route path="/practice" component={Practice}/>
         </Router>
         
       )

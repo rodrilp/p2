@@ -17,7 +17,11 @@ export default class Home extends Component {
                         <li>
                             <Link to="/">Home</Link>
                         </li>
-                        <li><Link to="/play/">Play</Link>
+                        <li>
+                            <Link to="/play/">Play</Link>
+                        </li>
+                        <li>
+                            <Link to = "/practice">Practice</Link>
                         </li>
                     </ul>
                 </nav>
