@@ -1,5 +1,6 @@
 export const QUESTION_ANSWER = "QUESTION_ANSWER";
 export const CHANGE_QUESTION = "CHANGE_QUESTION";
+export const CHANGE_NUMBER = "CHANGE_NUMBER";
 export const SUBMIT = "SUBMIT"; 
 export const INIT_QUESTION = "INIT_QUESTION";
 export const RESET = "RESET";
@@ -9,6 +10,10 @@ export function questionAnswer(index, answer) {
 }
 export function changeQuestion(isNext){
 	return { type:CHANGE_QUESTION,  isNext: isNext };
+}
+
+export function changeIndividual(number){
+  return { type:CHANGE_NUMBER, number:number}
 }
 
 export function submit (questions){

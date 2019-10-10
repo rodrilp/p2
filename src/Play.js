@@ -6,7 +6,7 @@ import Spinner from 'react-bootstrap/Spinner'
 import Game from './Game';
 import Botonera from './Botonera'
 import Mark from './Mark'
-import {questionAnswer, changeQuestion, submit, initQuestion, reset} from './redux/actions'
+import {questionAnswer, changeQuestion, changeIndividual, submit, initQuestion, reset} from './redux/actions'
 
 export class Play extends Component {
 
@@ -42,6 +42,7 @@ export class Play extends Component {
                       currentQuestion = {this.props.currentQuestion}
                       length = {this.props.questions.length}
                       finished = {this.props.finished}
+                      onChangeNumber = {(next) => this.props.dispatch(changeIndividual(next))}
                       onChangequestion = {(next) =>this.props.dispatch(changeQuestion(next))}
                       onSubmit = {() => this.props.dispatch(submit(this.props.questions))}
                       onReset = {() => {
