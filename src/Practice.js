@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css';
 import { connect } from 'react-redux';
+import Spinner from 'react-bootstrap/Spinner'
 import Game from './Game';
 import Botonera from './Botonera'
 import Mark from './Mark'
@@ -21,12 +22,31 @@ export class Practice extends Component {
     render() {
         //console.log(this.props);
     console.log(this.props.questions)
-    if(!this.props.finished){
-      return (
-        <div className = 'App'>
-          <div className = 'Navbar'>
-            <h1>QUIZ GAME</h1>
+    if(this.props.questions.length>0){
+      if(!this.props.finished){
+        return (
+          <div className = 'App'>
+            <div className = 'Navbar'>
+              <h1>QUIZ GAME</h1>
+            </div>
+            <Game question = {this.props.questions[this.props.currentQuestion]}
+                  currentQuestion = {this.props.currentQuestion}
+                  onQuestionAnswer={(answer) => {
+                    this.props.dispatch(questionAnswer(this.props.currentQuestion, answer));
+                  }}
+            />
+            <Botonera question = {this.props.questions[this.props.currentQuestion]}
+                      currentQuestion = {this.props.currentQuestion}
+                      length = {this.props.questions.length}
+                      finished = {this.props.finished}
+                      onChangequestion = {(next) =>this.props.dispatch(changeQuestion(next))}
+                      onSubmit = {() => this.props.dispatch(submit(this.props.questions))}
+                      onReset = {() => {
+                        this.loadQuizzes()
+                        this.props.dispatch(reset())}}
+            />
           </div>
+<<<<<<< HEAD
           <Game question = {this.props.questions[this.props.currentQuestion]}
                 currentQuestion = {this.props.currentQuestion}
                 onQuestionAnswer={(answer) => {
@@ -50,13 +70,34 @@ export class Practice extends Component {
       console.log(this.props.finished)
       return (
         <div className = 'App'>
-          <div className = 'Navbar'>
-            <h1>QUIZ GAME</h1>
+=======
+        )
+      }else {
+        console.log(this.props.finished)
+        return (
+          <div className = 'App'>
+            <div className = 'Navbar'>
+              <h1>QUIZ GAME</h1>
+            </div>
+          <Mark score = {this.props.score}
+                onReset = {() => {
+                  this.loadQuizzes()
+                  this.props.dispatch(reset())}}/>
           </div>
-        <Mark score = {this.props.score}
-              onReset = {() => {
-                this.loadQuizzes()
-                this.props.dispatch(reset())}}/>
+          
+        )
+      }
+    }else{
+      return(
+        <div className='padre'>
+>>>>>>> a463333cf5c7eab2a2ef34bf2d3589e2cfcb1017
+          <div className = 'Navbar'>
+              <h1>QUIZ GAME</h1>
+          </div>
+          <div className= 'spinner'>
+            <p className = 'text'>Cargando las preguntas...</p>  
+            <p className='rueda'><Spinner animation="border" variant="primary"/></p>
+          </div>
         </div>
         
       )
@@ -72,4 +113,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Practice);
+export default connect(mapStateToProps)(Play);
