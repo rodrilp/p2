@@ -1,11 +1,16 @@
 
 .padre{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.Navbar{
+    width:100%;
+}
 .spinner{
     margin: 0 auto;
+    margin-top: 55px;
 }
 .rueda{
     margin-left: 70px;
