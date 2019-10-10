@@ -6,6 +6,7 @@ import Game from './Game';
 import Botonera from './Botonera'
 import Mark from './Mark'
 import {questionAnswer, changeQuestion, changeIndividual, submit, initQuestion, reset} from './redux/actions'
+import Play from './Play'
 
 export class Practice extends Component {
     loadQuizzes(){
@@ -29,24 +30,6 @@ export class Practice extends Component {
             <div className = 'Navbar'>
               <h1>QUIZ GAME</h1>
             </div>
-            <Game question = {this.props.questions[this.props.currentQuestion]}
-                  currentQuestion = {this.props.currentQuestion}
-                  onQuestionAnswer={(answer) => {
-                    this.props.dispatch(questionAnswer(this.props.currentQuestion, answer));
-                  }}
-            />
-            <Botonera question = {this.props.questions[this.props.currentQuestion]}
-                      currentQuestion = {this.props.currentQuestion}
-                      length = {this.props.questions.length}
-                      finished = {this.props.finished}
-                      onChangequestion = {(next) =>this.props.dispatch(changeQuestion(next))}
-                      onSubmit = {() => this.props.dispatch(submit(this.props.questions))}
-                      onReset = {() => {
-                        this.loadQuizzes()
-                        this.props.dispatch(reset())}}
-            />
-          </div>
-<<<<<<< HEAD
           <Game question = {this.props.questions[this.props.currentQuestion]}
                 currentQuestion = {this.props.currentQuestion}
                 onQuestionAnswer={(answer) => {
@@ -65,12 +48,6 @@ export class Practice extends Component {
                       this.props.dispatch(reset())}}
           />
         </div>
-      )
-    }else {
-      console.log(this.props.finished)
-      return (
-        <div className = 'App'>
-=======
         )
       }else {
         console.log(this.props.finished)
@@ -90,7 +67,6 @@ export class Practice extends Component {
     }else{
       return(
         <div className='padre'>
->>>>>>> a463333cf5c7eab2a2ef34bf2d3589e2cfcb1017
           <div className = 'Navbar'>
               <h1>QUIZ GAME</h1>
           </div>
