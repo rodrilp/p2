@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import './App.css';
+import './Play.css';
 import { connect } from 'react-redux';
 import Spinner from 'react-bootstrap/Spinner'
-import Game from './Game';
-import Botonera from './Botonera'
-import Mark from './Mark'
-import {questionAnswer, changeQuestion, changeIndividual, submit, initQuestion, reset} from './redux/actions'
-import Play from './Play'
+import Game from './Game.jsx';
+import Botonera from './Botonera.jsx';
+import Mark from './Mark.jsx';
+import {questionAnswer, changeQuestion, changeIndividual, submit, initQuestion, reset} from './redux/actions.jsx';
 
-export class Practice extends Component {
+export class Play extends Component {
+
     loadQuizzes(){
       fetch('https://quiz.dit.upm.es/api/quizzes/random10wa?token=32403b83b30b3e467e6c')
       .then((response) =>{
@@ -16,6 +17,7 @@ export class Practice extends Component {
       })
       .then((data) => this.props.dispatch(initQuestion(data)))
     }
+
     componentDidMount(){
       this.loadQuizzes();
     }  
@@ -30,24 +32,24 @@ export class Practice extends Component {
             <div className = 'Navbar'>
               <h1>QUIZ GAME</h1>
             </div>
-          <Game question = {this.props.questions[this.props.currentQuestion]}
-                currentQuestion = {this.props.currentQuestion}
-                onQuestionAnswer={(answer) => {
-                  this.props.dispatch(questionAnswer(this.props.currentQuestion, answer));
-                }}
-          />
-          <Botonera question = {this.props.questions[this.props.currentQuestion]}
-                    currentQuestion = {this.props.currentQuestion}
-                    length = {this.props.questions.length}
-                    finished = {this.props.finished}
-                    onChangeNumber = {(next) => this.props.dispatch(changeIndividual(next))}
-                    onChangequestion = {(next) =>this.props.dispatch(changeQuestion(next))}
-                    onSubmit = {() => this.props.dispatch(submit(this.props.questions))}
-                    onReset = {() => {
-                      this.loadQuizzes()
-                      this.props.dispatch(reset())}}
-          />
-        </div>
+            <Game question = {this.props.questions[this.props.currentQuestion]}
+                  currentQuestion = {this.props.currentQuestion}
+                  onQuestionAnswer={(answer) => {
+                    this.props.dispatch(questionAnswer(this.props.currentQuestion, answer));
+                  }}
+            />
+            <Botonera question = {this.props.questions[this.props.currentQuestion]}
+                      currentQuestion = {this.props.currentQuestion}
+                      length = {this.props.questions.length}
+                      finished = {this.props.finished}
+                      onChangeNumber = {(next) => this.props.dispatch(changeIndividual(next))}
+                      onChangequestion = {(next) =>this.props.dispatch(changeQuestion(next))}
+                      onSubmit = {() => this.props.dispatch(submit(this.props.questions))}
+                      onReset = {() => {
+                        this.loadQuizzes()
+                        this.props.dispatch(reset())}}
+            />
+          </div>
         )
       }else {
         console.log(this.props.finished)
@@ -78,7 +80,6 @@ export class Practice extends Component {
         
       )
     }
-    
     
   }
 }

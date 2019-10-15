@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route}
 from "react-router-dom"
 
-import Home from './Home';
-import Play from './Play';
-import Practice from './Practice';
+import Home from './Home.jsx';
+import Play from './Play.jsx';
+import Practice from './Practice.jsx';
 
 
 

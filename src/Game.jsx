@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Question from "./Question"
-import Tips from "./Tips"
+import Question from "./Question.jsx"
+import Tips from "./Tips.jsx"
 import Image from 'react-bootstrap/Image'
 import './App.css';
 

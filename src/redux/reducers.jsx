@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { QUESTION_ANSWER, CHANGE_QUESTION, CHANGE_NUMBER, SUBMIT, INIT_QUESTION, RESET} from './actions';
+import { QUESTION_ANSWER, CHANGE_QUESTION, CHANGE_NUMBER, SUBMIT, INIT_QUESTION, RESET} from './actions.jsx';
 
 function score(state = 0, action = {}) {
     switch(action.type) {

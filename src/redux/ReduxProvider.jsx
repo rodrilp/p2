@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux';
-import GlobalState from './reducers';
+import GlobalState from './reducers.jsx';
 import { createStore } from 'redux';
 /* import { questions } from "../assets/mock-data"; */
 
