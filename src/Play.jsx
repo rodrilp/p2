@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import './App.css';
-import './Play.css';
+//import './App.css';
+//import './Play.css';
 import { connect } from 'react-redux';
 import Spinner from 'react-bootstrap/Spinner'
 import Game from './Game.jsx';

@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import Question from "./Question.jsx"
 import Tips from "./Tips.jsx"
 import Image from 'react-bootstrap/Image'
-import './App.css';
+//import './App.css';
+import Answer from "./Answer"
 
 
 export default class Game extends Component {
@@ -10,15 +11,14 @@ export default class Game extends Component {
         let imagen = this.props.question.author.photo.url;
         return (
             <div>
+                <Photo question = {this.props.question}/>
                 <Question question = {this.props.question}
-                          currentQuestion = {this.props.currentQuestion}/>
-                <input  className="caja"
-                        type ='text'
-                        value={this.props.question.userAnswer || ''}
-                        placeholder='Introduzca su respuesta'
-                        title ="Respuesta"
-                        onChange = {(e)=> {this.props.onQuestionAnswer(e.target.value)}}
-                />
+                          currentQuestion = {this.props.currentQuestion}
+                          />
+                <Answer question = {this.props.question}
+                        _onChangeAnswer = {(next) => this.props.onQuestionAnswer(next)}/>
+
+                
                 <p className = "credits">Created by {this.props.question.author.username}
                     <Image className="fotoCreador" src={imagen} roundedCircle alt ="Avatar del creador de la pregunta"/>
                 </p>

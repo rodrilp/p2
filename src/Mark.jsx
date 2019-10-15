@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Button from 'react-bootstrap/Button'
-import './App.css';
+//import './App.css';
 
 export default class Mark extends Component {
     render() {

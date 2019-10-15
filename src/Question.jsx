@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import imagen from './no-foto.png'
-import './App.css';
+//import './App.css';
 
 export default class Question extends Component {
     render() {
