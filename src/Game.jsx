@@ -3,7 +3,8 @@ import Question from "./Question.jsx"
 import Tips from "./Tips.jsx"
 import Image from 'react-bootstrap/Image'
 //import './App.css';
-import Answer from "./Answer"
+import Answer from './Answer'
+import Photo from './Photo'
 
 
 export default class Game extends Component {
