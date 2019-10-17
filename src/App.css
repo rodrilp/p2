@@ -1,81 +1,67 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
-
 .Navbar{
   background-color: #575758;
   margin-top: 0px;
 }
-
 h1{
   text-align: left;
   color: aliceblue;
 }
-.foto{
-  position: relative;
-  top: 0px; /* ajustar los valores para mover la imagen */
-  left: 15px;
-  width: 500px;
-  height: 300px;
-  display: block;
+body{
+  height: 100%;
+  width: 100%;
 }
-.fotoCreador{
-  position: absolute;
-  width:50px;
-  height:50px;
-  top: -10px;
-  left: 320px;
+.play{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
 }
-.texto{
-  position: relative;
-  top: -250px; /* ajustar los valores para mover la imagen */
-  left:685px;
-  width: 500px;
-  height: 300;
-  font-size: 40px;
-  display: block;
+.game{
+  display: flex;
+  flex-direction: row;
 }
-.caja{
-  position: relative;
-  top: -250px; /* ajustar los valores para mover la imagen */
-  left:840px;
-  width: 200px;
-  height: 45px;
-  display: block;
+.photo{
+  display: inline-flex;
+  align-items: flex-start;
 }
-.botonera{
-  position: relative;
-  top: -225px; /* ajustar los valores para mover la imagen */
-  left:280px;
-  width: 600px;
-  height: 45px;
-  display: block;
+.contenedor_game{
+  display: inline-flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;  
 }
 .credits{
-  position: relative;
-  top: -480px; /* ajustar los valores para mover la imagen */
-  left:950px;
-  width: 500px;
-  height: 300;
-  font-size: 15px;
-  display: block;
+  align-items: flex-end;
+  align-self: flex-end;
 }
+.contenedor_botonera{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.tips{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.foto{
+  width: 600px;
+  height: 350px;
+}
+.spinner{
+  margin: 0 auto;
+  margin-top: 55px;
+}
+.rueda{
+  margin-left: 70px;
+}
+.padre{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
-//import './App.css'
+import './App.css'
 
 export default class Botonera extends Component {
     render() {
         return (
-            <div>
+            <div className = "contenedor_botonera">
                 <ButtonGroup className = "botonera" aria-label="Basic example">
                     <Button variant="success"
                             onClick = {()=> this.props.onSubmit()}
@@ -24,7 +24,7 @@ export default class Botonera extends Component {
                             onClick = {()=> this.props.onReset()}>Reset
                     </Button>
                 </ButtonGroup>
-                <ButtonGroup>
+                <ButtonGroup className = "botonera">
                      <Button variant="success"
                              onClick = {() => this.props.onChangeNumber(0)}>1
                      </Button>

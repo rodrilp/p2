@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-//import './App.css';
+import './App.css';
 
 export default class Tips extends Component {
     render() {
@@ -12,7 +12,7 @@ export default class Tips extends Component {
             );
         }
         return (
-            <div>
+            <div className = "tips">
                 <h5>Tips</h5>  
                     {list}
             </div> 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-//import './App.css';
-//import './Play.css';
+import './App.css';
 import { connect } from 'react-redux';
 import Spinner from 'react-bootstrap/Spinner'
 import Game from './Game.jsx';
@@ -28,27 +27,29 @@ export class Play extends Component {
     if(this.props.questions.length>0){
       if(!this.props.finished){
         return (
-          <div className = 'App'>
+          <div>
             <div className = 'Navbar'>
               <h1>QUIZ GAME</h1>
             </div>
-            <Game question = {this.props.questions[this.props.currentQuestion]}
-                  currentQuestion = {this.props.currentQuestion}
-                  onQuestionAnswer={(answer) => {
-                    this.props.dispatch(questionAnswer(this.props.currentQuestion, answer));
-                  }}
-            />
-            <Botonera question = {this.props.questions[this.props.currentQuestion]}
-                      currentQuestion = {this.props.currentQuestion}
-                      length = {this.props.questions.length}
-                      finished = {this.props.finished}
-                      onChangeNumber = {(next) => this.props.dispatch(changeIndividual(next))}
-                      onChangequestion = {(next) =>this.props.dispatch(changeQuestion(next))}
-                      onSubmit = {() => this.props.dispatch(submit(this.props.questions))}
-                      onReset = {() => {
-                        this.loadQuizzes()
-                        this.props.dispatch(reset())}}
-            />
+            <div className = "play">
+              <Game question = {this.props.questions[this.props.currentQuestion]}
+                    currentQuestion = {this.props.currentQuestion}
+                    onQuestionAnswer={(answer) => {
+                      this.props.dispatch(questionAnswer(this.props.currentQuestion, answer));
+                    }}
+              />
+              <Botonera question = {this.props.questions[this.props.currentQuestion]}
+                        currentQuestion = {this.props.currentQuestion}
+                        length = {this.props.questions.length}
+                        finished = {this.props.finished}
+                        onChangeNumber = {(next) => this.props.dispatch(changeIndividual(next))}
+                        onChangequestion = {(next) =>this.props.dispatch(changeQuestion(next))}
+                        onSubmit = {() => this.props.dispatch(submit(this.props.questions))}
+                        onReset = {() => {
+                          this.loadQuizzes()
+                          this.props.dispatch(reset())}}
+              />
+            </div>
           </div>
         )
       }else {
