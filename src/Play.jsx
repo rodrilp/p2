@@ -27,7 +27,7 @@ export class Play extends Component {
     if(this.props.questions.length>0){
       if(!this.props.finished){
         return (
-          <div>
+          <div className ="Bodi">
             <div className = 'Navbar'>
               <h1>QUIZ GAME</h1>
             </div>

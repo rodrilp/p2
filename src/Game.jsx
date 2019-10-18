@@ -16,9 +16,10 @@ export default class Game extends Component {
                     <Photo question = {this.props.question}/>
                     <div className = "contenedor_game">
                         <p className = "credits">Created by {this.props.question.author.username}
-                            <Image className="fotoCreador" src={imagen} roundedCircle alt ="Avatar del creador de la pregunta" width = "30px" height = "30px"/>
+                            <Image className= "fotoCreador" src={imagen} roundedCircle alt ="Avatar del creador de la pregunta" width = "30px" height = "30px"/>
                         </p>  
-                        <Question question = {this.props.question}
+                        <Question className="pregunta" 
+                                question = {this.props.question}
                                 currentQuestion = {this.props.currentQuestion}
                                 />
                         <Answer question = {this.props.question}
