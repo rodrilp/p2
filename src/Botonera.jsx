@@ -7,7 +7,7 @@ export default class Botonera extends Component {
     render() {
         return (
             <div className = "contenedor_botonera">
-                <ButtonGroup className = "botonera" aria-label="Basic example">
+                <ButtonGroup className = "botonera1" aria-label="Basic example">
                     <Button variant="info"
                             onClick = {()=> this.props.onSubmit()}
                             disabled = {this.props.currentQuestion !== (this.props.length -1)}>Submit
@@ -24,7 +24,7 @@ export default class Botonera extends Component {
                             onClick = {()=> this.props.onReset()}>Reset
                     </Button>
                 </ButtonGroup>
-                <ButtonGroup className = "botonera">
+                <ButtonGroup className = "botonera2">
                      <Button variant="info"
                              onClick = {() => this.props.onChangeNumber(0)}>1
                      </Button>
