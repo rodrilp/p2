@@ -11,25 +11,21 @@ export default class Game extends Component {
     render() {
         let imagen = this.props.question.author.photo.url;
         return (
-            <div className = "content">
-                <div className = "game">
-                    <Photo question = {this.props.question}/>
-                    <div className = "contenedor_game">
-                        <div className = "autor">
-                            <p className = "credits">Created by {this.props.question.author.username}
-                                <Image className= "fotoCreador" src={imagen} roundedCircle alt ="Avatar del creador de la pregunta" width = "30px" height = "30px"/>
-                            </p>  
-                        </div>
-
-                        <Question className="pregunta" 
-                                question = {this.props.question}
+            <div className = "question">
+                <Photo question = {this.props.question}/>
+                <div className = "contenedor_question">
+                    <Question   question = {this.props.question}
                                 currentQuestion = {this.props.currentQuestion}
-                                />
-                        <Answer question = {this.props.question}
-                                _onChangeAnswer = {(next) => this.props.onQuestionAnswer(next)}/>  
-                    </div>   
-                    <Tips question = {this.props.question}/>                 
+                            />
+                    <Answer question = {this.props.question}
+                            _onChangeAnswer = {(next) => this.props.onQuestionAnswer(next)}/>  
                 </div>
+                <div className = "informacion">
+                    <p className = "credits">Created by {this.props.question.author.username}
+                            <Image className= "fotoCreador" src={imagen} roundedCircle alt ="Avatar del creador de la pregunta" width = "30px" height = "30px"/>
+                    </p>    
+                    <Tips question = {this.props.question}/>                 
+                </div>  
             </div>
         )
     }

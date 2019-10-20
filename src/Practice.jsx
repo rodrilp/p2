@@ -6,7 +6,6 @@ import Game from './Game.jsx';
 import Botonera from './Botonera.jsx'
 import Mark from './Mark.jsx'
 import {questionAnswer, changeQuestion, changeIndividual, submit, initQuestion, reset} from './redux/actions.jsx'
-import Play from './Play.jsx'
 
 export class Practice extends Component {
     loadQuizzes(){
@@ -52,7 +51,7 @@ export class Practice extends Component {
       }else {
         console.log(this.props.finished)
         return (
-          <div className = 'App'>
+          <div className = 'app'>
             <div className = 'Navbar'>
               <h1>QUIZ GAME</h1>
             </div>
@@ -89,4 +88,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Play);
+export default connect(mapStateToProps)(Practice);

@@ -1,78 +1,126 @@
 .App-logo {
   height: 40vmin;
 }
+.app{
+  background-color: #B2DBBF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .Navbar{
   background-color: #247BA0;
   margin-top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.home{
+  height: 25;
+  width: 25px;
+
+}
+.timer{
+  font-size: 35px;
 }
 h1{
   text-align: left;
   color: aliceblue;
 }
-body{
-  height: 100%;
-  width: 100%;
-  /*quiero poner este color de fondo pero no me deja*/
-  
-}
-.content{
-  background-color: #B2DBBF;
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-right: 10px;
-}
-p.texto{
-  text-align: center;
-}
-.play{
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-}
-.game{
+.question{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: aliceblue;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+.contenedor_question{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 15px;
+}
+.pregunta{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.texto1{
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  vertical-align: baseline;
+  font-weight: 700;
+  color: rgb(25, 174, 219);
+  font-size: 25px;
+  line-height: 1.225em;
+  text-decoration: underline;
+}
+.texto2{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: baseline;
+  font-weight: 700;
+  color: #1d1d1d;
+  font-size: 35px;
+  line-height: 1.225em;
+}
+.respuesta{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .photo{
-  display: inline-flex;
-  align-items: flex-start;
+  margin-top: 10px;
   margin-left: 10px;
-  margin-bottom: 15px;
-}
-.contenedor_game{
-  display: inline-flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;  
-}
-.autor{
-  align-self: flex-end;
-  margin-left: 100px;
-}
-.credits{
-  justify-content: flex-end;
-  align-content: flex-start;  
-  align-self: flex-end;
-}
-.contenedor_botonera{
+  margin-right: 10px;
+  margin-bottom: 10px;
   display: flex;
-  flex-direction: column-reverse;
-  bottom: 10px;
-  width: 100%;
-}
-.tips{
-
-  flex-direction: row;
-  align-items: flex-start;
-  margin-top: 30px;
-  margin-right: 30px;
+  justify-content: center;
+  align-items: center;
 }
 .foto{
   width: 600px;
-  height: 350px;
+  height: 300px;
+}
+.informacion{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+}
+.credits{
+  display: flex; 
+  flex-direction: row;
+
+  align-self: flex-end;
+}
+.fotoCreador{
+  margin-left: 15px;
+}
+.tips{
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  background-color: #B2DBBF; 
+  border-image: initial;
+  border-radius:10px; 
+}
+.texto3{
+  align-self: center;
+  text-decoration: underline;
+}
+.botonera{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.botonera1{
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .spinner{
   margin: 0 auto;
@@ -87,37 +135,10 @@ justify-content: space-around;
   justify-content: center;
   align-items: center;
 }
-.fotoCreador{
-  margin-left: 10px;
-}
-.texto1{
-  text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  vertical-align: baseline;
-  font-weight: 700;
-  color: #808080;
-  font-size: 25px;
-  line-height: 1.225em;
-  text-decoration: underline;
-}
-.texto2{
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  vertical-align: baseline;
-  font-weight: 700;
-  color: #1d1d1d;
-  font-size: 35px;
-  line-height: 1.225em;
-}
-.botonera1{
-  width: 50%;
-  height: 50%;
-  margin-top: 10px;
-  align-self:  center;
-}
-.botonera2{
-  width: 80%;
-  height: 80%;
-  margin-top: 10px;
-  align-self: center;
+.mark{
+  background-color: rgb(189, 241, 233);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

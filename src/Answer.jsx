@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import "./App.css"
 
 export default class Answer extends Component {
     render() {
         return (
-            <div>
+            <div className = "respuesta">
                 <input  className="caja"
                         type ='text'
                         value={this.props.question.userAnswer || ''}

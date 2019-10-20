@@ -13,7 +13,7 @@ export default class Tips extends Component {
         }
         return (
             <div className = "tips">
-                <h5>Tips</h5>  
+                <h5 className = 'texto3'>Tips</h5>  
                     {list}
             </div> 
         )

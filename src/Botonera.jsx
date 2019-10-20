@@ -6,7 +6,7 @@ import './App.css'
 export default class Botonera extends Component {
     render() {
         return (
-            <div className = "contenedor_botonera">
+            <div className = "botonera">
                 <ButtonGroup className = "botonera1" aria-label="Basic example">
                     <Button variant="info"
                             onClick = {()=> this.props.onSubmit()}
