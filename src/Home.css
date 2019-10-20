@@ -19,7 +19,7 @@
   
     /* La imagen ocupa el 100% y se reescala */
     background-size: cover;
-    width: 1300px;
+    width: 100%;
     height: 2000px;
     
 }
